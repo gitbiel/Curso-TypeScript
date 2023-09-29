@@ -20,7 +20,7 @@ window.addEventListener('scroll', handleScroll);
   Uma função, quando criada para ser executada em diferentes tipos
   de eventos, deve receber como parâmetro o tipo comum entre elas Event.
 */
-function ativarMenu(event) {
+function activeMenu(event) {
     console.log(event.type);
     if (event instanceof MouseEvent) {
         console.log(event.pageX);
@@ -29,6 +29,6 @@ function ativarMenu(event) {
         console.log(event.touches[0].pageX);
     }
 }
-document.documentElement.addEventListener('mousedown', ativarMenu);
-document.documentElement.addEventListener('touchstart', ativarMenu);
-document.documentElement.addEventListener('pointerdown', ativarMenu);
+document.documentElement.addEventListener('mousedown', activeMenu);
+document.documentElement.addEventListener('touchstart', activeMenu);
+document.documentElement.addEventListener('pointerdown', activeMenu);

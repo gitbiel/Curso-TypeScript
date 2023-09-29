@@ -25,7 +25,7 @@ window.addEventListener('scroll', handleScroll);
   de eventos, deve receber como parâmetro o tipo comum entre elas Event.
 */
 
-function ativarMenu(event: Event) {
+function activeMenu(event: Event) {
   console.log(event.type);
   if (event instanceof MouseEvent) {
     console.log(event.pageX);
@@ -35,7 +35,7 @@ function ativarMenu(event: Event) {
   }
 }
 
-document.documentElement.addEventListener('mousedown', ativarMenu);
-document.documentElement.addEventListener('touchstart', ativarMenu);
-document.documentElement.addEventListener('pointerdown', ativarMenu);
+document.documentElement.addEventListener('mousedown', activeMenu);
+document.documentElement.addEventListener('touchstart', activeMenu);
+document.documentElement.addEventListener('pointerdown', activeMenu);
 
