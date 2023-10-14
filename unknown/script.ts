@@ -6,7 +6,7 @@
   
 */
 
-function typeGuard(value: unknown) {
+function TypeGuard(value: unknown) {
   if (typeof value === "string") {
     return value.toUpperCase();
   }
@@ -17,6 +17,6 @@ function typeGuard(value: unknown) {
     return value.innerText;
   }
 }
-console.log(typeGuard("Computador"));
-console.log(typeGuard(200));
-console.log(typeGuard(document.body));
+console.log(TypeGuard("Computador"));
+console.log(TypeGuard(200));
+console.log(TypeGuard(document.body));
