@@ -5,32 +5,31 @@
 // 4 - Use Type Guards para garantir a Type Safety do código
 // 5 - Preencha os dados da API na tela.
 async function FetchCursos() {
-  const response = await fetch("https://api.origamid.dev/json/cursos.json");
-  const json = await response.json();
-  ShowCourses(json);
+    const response = await fetch("https://api.origamid.dev/json/cursos.json");
+    const json = await response.json();
+    ShowCourses(json);
 }
 FetchCursos();
 function isCourse(value) {
-  if (
-    value &&
-    typeof value === "object" &&
-    "nome" in value &&
-    "horas" in value &&
-    "tags" in value
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+    if (value &&
+        typeof value === "object" &&
+        "nome" in value &&
+        "horas" in value &&
+        "tags" in value) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 function ShowCourses(data) {
-  if (Array.isArray(data)) {
-    data.filter(isCourse).forEach((item) => {
-      document.body.innerHTML += `
+    if (Array.isArray(data)) {
+        data.filter(isCourse).forEach((item) => {
+            document.body.innerHTML += `
       <p>${item.nome}</p>
       <p>${item.horas}</p>
       <p>${item.tags}</p>
       `;
-    });
-  }
+        });
+    }
 }
