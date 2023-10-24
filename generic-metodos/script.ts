@@ -11,7 +11,7 @@ interface Notebook {
   nome: string;
 }
 
-async function handleData() {
+async function Data() {
   const notebook = await getData<Notebook>(
     'https://api.origamid.dev/json/notebook.json',
   );

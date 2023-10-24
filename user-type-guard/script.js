@@ -7,12 +7,12 @@
   Podemos verificar se o dado é instanceof Array ou podemos usar a função
   Array.isArray().
 */
-async function fetchCursos() {
+async function cursos() {
     const response = await fetch("https://api.origamid.dev/json/cursos.json");
     const json = await response.json();
     handleCursos(json);
 }
-fetchCursos();
+cursos();
 function handleCursos(data) {
     if (data instanceof Array) {
         console.log('É instância de Array');
@@ -35,9 +35,9 @@ function handleCursos(data) {
 function isString(value) {
     return typeof value === "string";
 }
-function handleData(data) {
+function data(data) {
     if (isString(data)) {
         return data.toUpperCase();
     }
 }
-console.log(handleData("Origamid"));
+console.log(data("Origamid"));

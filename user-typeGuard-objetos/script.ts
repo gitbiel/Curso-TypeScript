@@ -5,12 +5,12 @@
   para objetos específicos e garantirmos a Type Safety (segurança) do projeto.
 */
 
-async function fetchProduto() {
+async function fetchproduto() {
   const response = await fetch("https://api.origamid.dev/json/notebook.json");
   const json = await response.json();
   handleProduto(json);
 }
-fetchProduto();
+fetchproduto();
 
 interface Priduto {
   nome: string;

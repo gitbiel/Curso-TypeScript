@@ -6,11 +6,11 @@
 */
 const btn = document.querySelector('button');
 
-function handleClick(event: MouseEvent) {
+function Click(event: MouseEvent) {
   console.log(event.pageX);
 }
 
-btn?.addEventListener('click', handleClick);
+btn?.addEventListener('click', Click);
 
 function handleScroll(event: Event) {
   console.log(event);

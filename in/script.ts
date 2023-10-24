@@ -18,13 +18,13 @@ interface Notebook {
   preco: number;
 }
 
-async function fetchProduto() {
+async function fetchProdutos() {
   const response = await fetch('https://api.origamid.dev/json/notebook.json');
   const json = await response.json();
   handleProduto(json);
 }
 
-function handleProduto(data: Notebook) {
+function handleProdutos(data: Notebook) {
   if("nome" in data) {
     document.body.innerHTML += `
     <h1>Produto: ${data.nome}</h1>

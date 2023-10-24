@@ -1,10 +1,10 @@
 "use strict";
-async function fetchCursos() {
+async function Cursos() {
     const response = await fetch("https://api.origamid.dev/json/cursos.json");
     const data = await response.json();
     mostrarCursos(data);
 }
-fetchCursos();
+Cursos();
 function mostrarCursos(cursos) {
     cursos.forEach((curso) => {
         if (curso.nivel === "iniciante") {
