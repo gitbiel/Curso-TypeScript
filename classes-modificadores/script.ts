@@ -1,7 +1,7 @@
 /*
   Classes
   As classes/funções construtoras são responsáveis pela construção de objetos
-  que já vimos, como MouseEvent, HTMLElement e os demais.
+  que já vimos, como MouseEvent, HTMLElement e os demais...
 */
 
 // f HTMLElement()
